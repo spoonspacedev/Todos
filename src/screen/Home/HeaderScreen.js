@@ -40,9 +40,9 @@ const styles = StyleSheet.create({
     heading: {
         fontSize: 20,
         color: "#000000",
-        fontWeight: '500'
+        fontStyle: 'bold'
     },
-    heading_container: {
+    txtHeadingContainer: {
         flex: 1,
         justifyContent: 'center',
         paddingLeft: 20,
