@@ -8,3 +8,5 @@ export const icn_box = require('./box.png');
 export const icn_tick = require('./tick.png'); 
 export const icn_add = require('./add.png');
 export const btn_accept = require('./accept.png');
+export const icn_checked = require('./checked.png');
+export const icn_unchecked = require('./unchecked.png');

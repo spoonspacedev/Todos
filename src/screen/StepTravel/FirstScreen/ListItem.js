@@ -1,198 +1,50 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from "react-native";
 
+
+const Item = ({ title, detail }) => (
+    <View
+        style={styles.ctnItemCell}
+    >
+        <View
+            style={styles.ctnWrapLeft}
+        >
+            <Text
+                style={styles.txtNormalListItem}
+            >
+                {title}
+            </Text>
+        </View>
+
+        <View
+            style={styles.ctnWrapRight}
+        >
+            <Text
+                style={styles.txtNormalListItem}
+            >
+                {detail}
+            </Text>
+        </View>
+    </View>
+);
+
 const ListItem = () => {
     return (
-        <View>
-            <View
-                style={styles.ctnItemCell}
-            >
-                <View
-                    style={styles.ctnWrapLeft}
-                >
-                    <Text
-                        style={styles.txtNormalListItem}
-                    >
-                        お名前
-                    </Text>
-                </View>
-
-                <View
-                    style={styles.ctnWrapRight}
-                >
-                    <Text
-                        style={styles.txtNormalListItem}
-                    >
-                        ひおり　には
-                    </Text>
-                </View>
-            </View>
-            <View
-                style={styles.ctnItemCell}
-            >
-                <View
-                    style={styles.ctnWrapLeft}
-                >
-                    <Text
-                        style={styles.txtNormalListItem}
-                    >
-                        フリガナ
-                    </Text>
-                </View>
-
-                <View
-                    style={styles.ctnWrapRight}
-                >
-                    <Text
-                        style={styles.txtNormalListItem}
-                    >
-                        セイ
-                    </Text>
-                </View>
-            </View>
-            <View
-                style={styles.ctnItemCell}
-            >
-                <View
-                    style={styles.ctnWrapLeft}
-                >
-                    <Text
-                        style={styles.txtNormalListItem}
-                    >
-                        性別
-                    </Text>
-                </View>
-
-                <View
-                    style={styles.ctnWrapRight}
-                >
-                    <Text
-                        style={styles.txtNormalListItem}
-                    >
-                        女性
-                    </Text>
-                </View>
-            </View>
-            <View
-                style={styles.ctnItemCell}
-            >
-                <View
-                    style={styles.ctnWrapLeft}
-                >
-                    <Text
-                        style={styles.txtNormalListItem}
-                    >
-                        生年月日
-                    </Text>
-                </View>
-
-                <View
-                    style={styles.ctnWrapRight}
-                >
-                    <Text
-                        style={styles.txtNormalListItem}
-                    >
-                        1988年11月18日
-                    </Text>
-                </View>
-            </View>
-
-            <View
-                style={styles.ctnItemCell}
-            >
-                <View
-                    style={styles.ctnWrapLeft}
-                >
-                    <Text
-                        style={styles.txtNormalListItem}
-                    >
-                        生年月日
-                    </Text>
-                </View>
-
-                <View
-                    style={styles.ctnWrapRight}
-                >
-                    <Text
-                        style={styles.txtNormalListItem}
-                    >
-                        03012345678
-                    </Text>
-                </View>
-            </View>
-
-            <View
-                style={styles.ctnItemCell}
-            >
-                <View
-                    style={styles.ctnWrapLeft}
-                >
-                    <Text
-                        style={styles.txtNormalListItem}
-                    >
-                        携帯電話番号
-                    </Text>
-                </View>
-
-                <View
-                    style={styles.ctnWrapRight}
-                >
-                    <Text
-                        style={styles.txtNormalListItem}
-                    >
-                        09012345678
-                    </Text>
-                </View>
-            </View>
-
-            <View
-                style={styles.ctnItemCell}
-            >
-                <View
-                    style={styles.ctnWrapLeft}
-                >
-                    <Text
-                        style={styles.txtNormalListItem}
-                    >
-                        弊社からの連絡先
-                    </Text>
-                </View>
-
-                <View
-                    style={styles.ctnWrapRight}
-                >
-                    <Text
-                        style={styles.txtNormalListItem}
-                    >
-                        自宅電話番号
-                    </Text>
-                </View>
-            </View>
-
-            <View
-                style={styles.ctnItemCell}
-            >
-                <View
-                    style={styles.ctnWrapLeft}
-                >
-                    <Text
-                        style={styles.txtNormalListItem}
-                    >
-                        ご自宅以外のご住所
-                    </Text>
-                </View>
-
-                <View
-                    style={styles.ctnWrapRight}
-                >
-                    <Text
-                        style={styles.txtNormalListItem}
-                    >
-                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com
-                    </Text>
-                </View>
-            </View>
-
+        <View
+        style={styles.container}
+        >
+            <Item title={"お名前"} detail={"ひおり　には"} />
+            <Item title={"フリガナ"} detail={"1988年11月18日"} />
+            <Item title={"生年月日"} detail={"セイ"} />
+            <Item title={"性別"} detail={"女性"} />
+            <Item title={"自宅電話番号"} detail={"03012345678"} />
+            <Item title={"携帯電話番号"} detail={"セ09012345678"} />
+            <Item title={"弊社からの連絡先"} detail={"自宅電話番号"} />
+            <Item title={"緊急連絡先"} detail={"09012345678"} />
+            <Item title={"生年月日"} detail={"セaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com"} />
+            <Item title={"性別"} detail={"女性"} />
+            <Item title={"自宅電話番号"} detail={"03012345678"} />
+            <Item title={"携帯電話番号"} detail={"セ09012345678"} />
         </View>
     )
 }
@@ -201,6 +53,9 @@ const styles = StyleSheet.create({
     txtHeading1: {
         color: "#1DABAB",
         fontSize: 20,
+    },
+    container:{
+        flex:1
     },
     txtNormal: {
         color: "#515557",
